@@ -1,0 +1,18 @@
+[package]
+name = "groot-plugin-navmesh"
+version = "0.1.0"
+edition = "2021"
+description = "3D NavMesh spatial pathfinding and AI steering for Groot"
+
+[dependencies]
+groot-plugin-api = { git = "https://github.com/JohnEsleyer/groot-plugin-api" }
+goscript = { git = "https://github.com/johnesleyer/goscript", branch = "main" }
+glam = "0.27"
+hecs = "0.10"
+log = "0.4"
+
+[patch."https://github.com/johnesleyer/goscript"]
+goscript = { path = "../goscript" }
+
+[patch."https://github.com/JohnEsleyer/groot-plugin-api"]
+groot-plugin-api = { path = "../groot-plugin-api" }
